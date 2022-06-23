@@ -5,7 +5,7 @@
 First run these commands to get everything running.
 
 ```bash
-virtualenv -p python 3.10 venv
+virtualenv -p python3.10 venv
 . venv/bin/activate
 pip install -r requirements.txt
 docker compose up
