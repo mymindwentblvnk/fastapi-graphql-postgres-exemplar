@@ -16,14 +16,14 @@ class Filters:
 
 @strawberry.type
 class Member:
-    id: int
+    beatle_id: int
     name: str
     age: int
     custom_information: JSON
 
     @classmethod
     def marshal(cls, model: MemberModel) -> "Member":
-        return Member(id=strawberry.ID(model.beatle_id),
+        return Member(beatle_id=strawberry.ID(model.beatle_id),
                       name=model.name,
                       age=model.age,
                       custom_information=model.custom_information)
